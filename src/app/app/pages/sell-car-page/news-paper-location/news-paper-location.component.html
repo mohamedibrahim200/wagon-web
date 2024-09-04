@@ -1,0 +1,712 @@
+<div class="containerSell">
+    <div class="titleBoxSell">
+        <h2>NewsPaper</h2>
+        <p>Choose The Page And The Place According To Your Budget</p>
+    </div>
+    <div class="boxSell pagesContainer">
+        <h2>Page Number One</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper onePaper">
+
+                            <div class="itemOne">
+                                <!-- <div class="sold">
+                                    <img src="./assets/Site_Images/sold.svg" alt="">
+                                </div> -->
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img class="typeWagon" src="./assets/Site_Images/car.svg" alt="Image" style="display: none;">
+                                    <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper twopaper">
+                            <div class="itemOne">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                            <div class="itemtwo">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper fourpaper">
+                            <div class="flexnewPaper">
+                                <div class="itemOne">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemtwo">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '1', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                            <div class="flexnewPaper">
+                                <div class="itemthree">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '2', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemfour">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '2', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="pageNumber == '1'" class="addImages">
+        <div class="titleBoxSell">
+            <h2>Upload Photos Car Ads</h2>
+        </div>
+        <div class="container_addImages">
+            <div class="ccss">
+                <div (click)="displayPopUp('main')" class="mainPhoto">
+                    <img *ngIf="adDetails.AdMainImage.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="adDetails.AdMainImage.length > 0" [src]="adDetails.AdMainImage" alt="">
+                    <p>Upload Main Photo</p>
+                </div>
+
+                <div class="containerUpload">
+                    <div (click)="displayPopUp('', 0)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[0]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[0] && adDetails.AdImages[0].length > 0" [src]="adDetails.AdImages[0]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 1)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[1]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[1] && adDetails.AdImages[1].length > 0" [src]="adDetails.AdImages[1]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 2)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[2]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[2] && adDetails.AdImages[2].length > 0" [src]="adDetails.AdImages[2]" alt="">
+                        <p>Upload Photos</p>
+                        <input type="file" class="file-input">
+                    </div>
+                </div>
+            </div>
+            <div class="iinn">
+                <div class="input_group">
+                    <label for="">Description Your Ads</label>
+                    <textarea [(ngModel)]="adDetails.description" placeholder="Description Your Ads" id="" cols="50" rows="30"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="boxSell pagesContainer">
+        <h2>Page Number Two</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper onePaper">
+
+                            <div class="itemOne">
+                                <!-- <div class="sold">
+                                    <img src="./assets/Site_Images/sold.svg" alt="">
+                                </div> -->
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img class="typeWagon" src="./assets/Site_Images/car.svg" alt="Image" style="display: none;">
+                                    <img (click)="chooseAdLocation({pageNumber: '2', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper twopaper">
+                            <div class="itemOne">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '2', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                            <div class="itemtwo">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '1', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper fourpaper">
+                            <div class="flexnewPaper">
+                                <div class="itemOne">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '2', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemtwo">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '2', rowNo: '0', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                            <div class="flexnewPaper">
+                                <div class="itemthree">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '2', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemfour">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '2', rowNo: '1', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="pageNumber == '2'" class="addImages">
+        <div class="titleBoxSell">
+            <h2>Upload Photos Car Ads</h2>
+        </div>
+        
+        <div class="container_addImages">
+            <div class="ccss">
+                <div (click)="displayPopUp('main')" class="mainPhoto">
+                    <img *ngIf="adDetails.AdMainImage.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="adDetails.AdMainImage.length > 0" [src]="adDetails.AdMainImage" alt="">
+                    <p>Upload Main Photo</p>
+                </div>
+
+                <div class="containerUpload">
+                    <div (click)="displayPopUp('', 0)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[0]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[0] && adDetails.AdImages[0].length > 0" [src]="adDetails.AdImages[0]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 1)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[1]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[1] && adDetails.AdImages[1].length > 0" [src]="adDetails.AdImages[1]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 2)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[2]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[2] && adDetails.AdImages[2].length > 0" [src]="adDetails.AdImages[2]" alt="">
+                        <p>Upload Photos</p>
+                        <input type="file" class="file-input">
+                    </div>
+                </div>
+            </div>
+            <div class="iinn">
+                <div class="input_group">
+                    <label for="">Description Your Ads</label>
+                    <textarea [(ngModel)]="adDetails.description" placeholder="Description Your Ads" id="" cols="50" rows="30"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxSell pagesContainer">
+        <h2>Page Number Three</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper onePaper">
+
+                            <div class="itemOne">
+                                <!-- <div class="sold">
+                                    <img src="./assets/Site_Images/sold.svg" alt="">
+                                </div> -->
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img class="typeWagon" src="./assets/Site_Images/car.svg" alt="Image" style="display: none;">
+                                    <img (click)="chooseAdLocation({pageNumber: '3', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper twopaper">
+                            <div class="itemOne">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '3', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                            <div class="itemtwo">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '3', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper fourpaper">
+                            <div class="flexnewPaper">
+                                <div class="itemOne">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '3', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemtwo">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '3', rowNo: '0', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                            <div class="flexnewPaper">
+                                <div class="itemthree">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '3', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemfour">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '3', rowNo: '1', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="pageNumber == '3'" class="addImages">
+        <div class="titleBoxSell">
+            <h2>Upload Photos Car Ads</h2>
+        </div>
+        
+        <div class="container_addImages">
+            <div class="ccss">
+                <div (click)="displayPopUp('main')" class="mainPhoto">
+                    <img *ngIf="adDetails.AdMainImage.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="adDetails.AdMainImage.length > 0" [src]="adDetails.AdMainImage" alt="">
+                    <p>Upload Main Photo</p>
+                </div>
+
+                <div class="containerUpload">
+                    <div (click)="displayPopUp('', 0)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[0]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[0] && adDetails.AdImages[0].length > 0" [src]="adDetails.AdImages[0]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 1)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[1]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[1] && adDetails.AdImages[1].length > 0" [src]="adDetails.AdImages[1]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 2)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[2]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[2] && adDetails.AdImages[2].length > 0" [src]="adDetails.AdImages[2]" alt="">
+                        <p>Upload Photos</p>
+                        <input type="file" class="file-input">
+                    </div>
+                </div>
+            </div>
+            <div class="iinn">
+                <div class="input_group">
+                    <label for="">Description Your Ads</label>
+                    <textarea [(ngModel)]="adDetails.description" placeholder="Description Your Ads" id="" cols="50" rows="30"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxSell pagesContainer">
+        <h2>Page Number Four</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper onePaper">
+
+                            <div class="itemOne">
+                                <!-- <div class="sold">
+                                    <img src="./assets/Site_Images/sold.svg" alt="">
+                                </div> -->
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img class="typeWagon" src="./assets/Site_Images/car.svg" alt="Image" style="display: none;">
+                                    <img (click)="chooseAdLocation({pageNumber: '4', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper twopaper">
+                            <div class="itemOne">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '4', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                            <div class="itemtwo">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '4', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper fourpaper">
+                            <div class="flexnewPaper">
+                                <div class="itemOne">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '4', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemtwo">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '4', rowNo: '0', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                            <div class="flexnewPaper">
+                                <div class="itemthree">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '4', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemfour">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '4', rowNo: '1', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="pageNumber == '4'" class="addImages">
+        <div class="titleBoxSell">
+            <h2>Upload Photos Car Ads</h2>
+        </div>
+        
+        <div class="container_addImages">
+            <div class="ccss">
+                <div (click)="displayPopUp('main')" class="mainPhoto">
+                    <img *ngIf="adDetails.AdMainImage.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="adDetails.AdMainImage.length > 0" [src]="adDetails.AdMainImage" alt="">
+                    <p>Upload Main Photo</p>
+                </div>
+
+                <div class="containerUpload">
+                    <div (click)="displayPopUp('', 0)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[0]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[0] && adDetails.AdImages[0].length > 0" [src]="adDetails.AdImages[0]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 1)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[1]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[1] && adDetails.AdImages[1].length > 0" [src]="adDetails.AdImages[1]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 2)" class="photoUpload">
+                        <img *ngIf="adDetails.AdImages[2]?.length == 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages[2] && adDetails.AdImages[2].length > 0" [src]="adDetails.AdImages[2]" alt="">
+                        <p>Upload Photos</p>
+                        <input type="file" class="file-input">
+                    </div>
+                </div>
+            </div>
+            <div class="iinn">
+                <div class="input_group">
+                    <label for="">Description Your Ads</label>
+                    <textarea [(ngModel)]="adDetails.description" placeholder="Description Your Ads" id="" cols="50" rows="30"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxSell pagesContainer">
+        <h2>Page Number Five</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper onePaper">
+
+                            <div class="itemOne">
+                                <!-- <div class="sold">
+                                    <img src="./assets/Site_Images/sold.svg" alt="">
+                                </div> -->
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img class="typeWagon" src="./assets/Site_Images/car.svg" alt="Image" style="display: none;">
+                                    <img (click)="chooseAdLocation({pageNumber: '5', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper twopaper">
+                            <div class="itemOne">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '5', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                            <div class="itemtwo">
+
+                                <div class="head_newpaper"></div>
+                                <div class="body_newpaper">
+                                    <img (click)="chooseAdLocation({pageNumber: '5', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                </div>
+                                <div class="footer_newpaper"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="Pages">
+                    <div class="newPaper_PageContainer">
+                        <img class="pageEmpty" src="./assets/Site_Images/pageEmpty.svg" alt="">
+                        <div class="item_newpaper fourpaper">
+                            <div class="flexnewPaper">
+                                <div class="itemOne">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '5', rowNo: '0', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemtwo">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '5', rowNo: '0', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                            <div class="flexnewPaper">
+                                <div class="itemthree">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '5', rowNo: '1', cellNo: '0'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                                <div class="itemfour">
+                                    <div class="head_newpaper"></div>
+                                    <div class="body_newpaper">
+                                        <img (click)="chooseAdLocation({pageNumber: '5', rowNo: '1', cellNo: '1'})" class="add" src="./assets/Site_Images/addNewPaper.svg" alt="">
+                                    </div>
+                                    <div class="footer_newpaper"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The Page Contains Just One Ad </p>
+                    <button>$1000</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="pageNumber == '5'" class="addImages">
+        <div class="titleBoxSell">
+            <h2>Upload Photos Car Ads</h2>
+        </div>
+        
+        <div class="container_addImages">
+            <div class="ccss">
+                <div (click)="displayPopUp('main')" class="mainPhoto">
+                    <img src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <p>Upload Main Photo</p>
+                </div>
+
+                <div class="containerUpload">
+                    <div (click)="displayPopUp('', 0)" class="photoUpload">
+                        <img *ngIf="!adDetails?.AdImages && !adDetails.AdImages[0]" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages" [src]="adDetails.AdImages[0]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 1)" class="photoUpload">
+                        <img *ngIf="!adDetails?.AdImages && !adDetails.AdImages[1]" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages" [src]="adDetails.AdImages[1]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div (click)="displayPopUp('', 2)" class="photoUpload">
+                        <img *ngIf="!adDetails?.AdImages && !adDetails.AdImages[2]" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <img *ngIf="adDetails.AdImages" [src]="adDetails.AdImages[2]" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="iinn">
+                <div class="input_group">
+                    <label for="">Description Your Ads</label>
+                    <textarea [(ngModel)]="adDetails.description" placeholder="Description Your Ads" id="" cols="50" rows="30"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="priceSKip">
+    <div class="webPrice">
+        <h3>Your Website Ad Price Is:</h3>
+        <p>100$</p>
+    </div>
+    <div class="buttonGroup">
+        <button class="skip">Skip</button>
+        <button (click)="continue()">Continue</button>
+    </div>
+</div>
+<app-upload-image *ngIf="displayPopup" (messageEmitter)="pushImage($event)" [displayPopup]="displayPopup"></app-upload-image>

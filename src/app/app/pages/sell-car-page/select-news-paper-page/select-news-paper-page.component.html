@@ -1,0 +1,102 @@
+<div class="containerSell">
+    <div class="titleBoxSell">
+        <h2>NewsPaper</h2>
+        <p>Choose The Page And The Place According To Your Budget</p>
+    </div>
+    <div class="boxSell pagesContainer">
+        <h1>Page Number</h1>
+        <div class="containerSelectPage">
+            <div class="firstOption">
+                <div class="buttonSelect">
+                    <button (click)="pageTemplates = '1'">Page Number One</button>
+                    <button (click)="pageTemplates = '2'">Page Number Two</button>
+                    <button (click)="pageTemplates = '3'">Page Number Three</button>
+                    <button (click)="pageTemplates = '4'">Page Number Four</button>
+
+                </div>
+                <div class="arrowToCategory">
+                    <img src="./assets/Site_Images/arrowSell.svg" alt="">
+                </div>
+                <div *ngIf="pageTemplates == '1'" class=" selectOption">
+                    <button (click)="selectPageStyle('1')">Template with single image</button>
+                    <button (click)="selectPageStyle('2')">Template with double image</button>
+                </div>
+                <div *ngIf="pageTemplates == '2'" class=" selectOption">
+                    <button (click)="selectPageStyle('1')">Template with single image</button>
+                    <button (click)="selectPageStyle('2')">Template with double image</button>
+                    <button (click)="selectPageStyle('3')">Template with Four image</button>
+                </div>
+                <div *ngIf="pageTemplates == '3'" class=" selectOption">
+                    <button (click)="selectPageStyle('1')">Template with single image</button>
+                    <button (click)="selectPageStyle('2')">Template with double image</button>
+                    <button (click)="selectPageStyle('3')">Template with Four boxes</button>
+                </div>
+                <div *ngIf="pageTemplates == '4'" class=" selectOption">
+                    <button (click)="selectPageStyle('1')">Template with single image</button>
+                    <button (click)="selectPageStyle('2')">Template with double image</button>
+                    <button (click)="selectPageStyle('3')">Template with Four image</button>
+                    <button (click)="selectPageStyle('4')">Template with six image</button>
+                </div>
+            </div>
+
+            <div class="secoundOption">
+                <img [src]="pageStyleImg" alt="">
+                <p>The Page Contains Four Ads Choose One </p>
+            </div>
+        </div>
+        <div class="Page_contains">
+            <p>The Page Contains Four Ads Choose One </p>
+            <div class="adPrice">
+                <p>Ad Price :</p>
+                <button>$1000</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="addImages">
+        <p>Please Add At Least 3 Image To Continue.</p>
+        <img class="closeAdd" src="./assets/Site_Images/closeAddIMage.svg" alt="">
+        <div class="container_addImages">
+            <div class="ccss">
+                <div class="mainPhoto">
+                    <img src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <p>Upload Main Photo</p>
+                </div>
+
+                <div class="containerUpload">
+                    <div class="photoUpload">
+                        <img src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div class="photoUpload">
+                        <img src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                        <p>Upload Photos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="iinn">
+                <div class="input_group">
+                    <label for="">Add Your Text</label>
+                    <textarea name="" placeholder="Add Your Text" id="" cols="50" rows="30"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div> -->
+
+
+
+</div>
+<div class="priceSKip">
+    <div class="webPrice">
+        <h3>Your Website Ad Price Is:</h3>
+        <p>100$</p>
+    </div>
+    <div class="buttonGroup">
+        <button (click)="submit()" class="skip">Skip</button>
+        <button (click)="submit()">Continue</button>
+    </div>
+</div>

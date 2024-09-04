@@ -1,0 +1,140 @@
+<div class="containerSell">
+    <div class="titleBoxSell">
+        <h2>Confirmation</h2>
+        <p>Check Your Info And Receipt</p>
+    </div>
+    <div class="boxSell pagesContainer">
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="detailsProductImage">
+                    <div class="swiper detailsSwip">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img [src]="carObject.mainImage" title="kimo" />
+                            </div>
+                            <div *ngFor="let img of carObject.carImages" class="swiper-slide">
+                                <img [src]="img" title="kimo" />
+                            </div>
+                            
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-7">
+                <div class="detailsProductContent">
+                    <div class="product_c_right">
+                        <div class="nameSale">
+                            <h2 class="nameProduct">{{carObject.brand + ' ' + carObject.model}}</h2>
+
+                        </div>
+                        <div class="types">
+                            <p class="price_product">{{carObject.price}} EGP</p>
+                            <p class="place_product">{{carObject.city}}</p>
+                            <p class="type_Product">{{carObject.BodyType}}</p>
+                        </div>
+                    </div>
+                    <div class="product_D_right">
+                        <div class="info_car">
+                            <div class="collapse-head">
+                                <p class="headDelRe">Your Wagon Information :</p>
+
+                            </div>
+                            <div class="collapse-body">
+                                <div class="bodyInfo">
+                                    <p *ngIf="carObject.year" class="contentDelRe">Year : <span>{{carObject.year}}</span></p>
+                                    <p class="contentDelRe">Fuel : <span>Gas</span></p>
+                                </div>
+                                <div class="bodyInfo">
+                                    <p *ngIf="carObject.milage" class="contentDelRe">Mileage : <span>{{carObject.milage}}</span></p>
+                                    <p *ngIf="carObject.transmission" class="contentDelRe">Transmission : <span>{{carObject.transmission}}</span></p>
+                                </div>
+                                <div class="bodyInfo">
+                                    <p *ngIf="carObject.engineCapacity" class="contentDelRe">Engine : <span>{{carObject.engineCapacity}} cm3</span></p>
+                                    <p *ngIf="carObject.color" class="contentDelRe">Color : <span>{{carObject.color}}</span></p>
+                                </div>
+                                <div class="bodyInfo">
+                                    <p *ngIf="carObject.interialMatrial" class="contentDelRe">Interial matrial : <span>{{carObject.interialMatrial}}</span></p>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="order_table ">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Your Invoice Information </th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr>
+                                <td>Web And App
+
+                                </td>
+                                <td> $50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Newspaer </td>
+                                <td> $50.00</td>
+                            </tr>
+                            <tr>
+                                <td>Sub-Total
+                                </td>
+                                <td>$215.00</td>
+                            </tr>
+                            <tr>
+                                <td>No Discount Available 
+                                    <form class="buttonGroup" *ngIf="displayDiscountForm" [formGroup]="myFormGroup" (submit)="verifyCode(myFormGroup.value)">
+                                        <input placeholder="Enter Discount code"  type="text" formControlName="discountCode" />
+                                        <button type="submit"> verify </button>
+                                        <button class="skip" (click)="displayDiscountForm = false"> cancel </button>
+                                    </form>
+                                    <div class=" buttonGroup">
+                                        <button (click)="displayDiscountInput()" *ngIf="!displayDiscountForm">Edit</button>
+                                        
+                                        
+                                    </div> 
+                                </td>
+                                <td>$215.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+
+                            <tr>
+                                <th>10 % VAT</th>
+                                <td><strong>$5.00</strong></td>
+                            </tr>
+                            <tr class="order_total">
+                                <th>Your Total Ad Price</th>
+                                <td><strong>$220.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="confirmCar buttonGroup">
+            <!-- <button class="skip">Back</button> -->
+            <button (click)="continue()">Confirm</button>
+        </div>
+
+    </div>
+
+
+</div>

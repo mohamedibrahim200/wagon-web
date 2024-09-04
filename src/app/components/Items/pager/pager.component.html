@@ -1,0 +1,7 @@
+<div class="">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li *ngfor="let page of pages" (click)="currentPage = page" class="page-item"><a [class]="'page-link' + (currentPage == page)? 'activePagination': ''" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+</div>

@@ -1,0 +1,284 @@
+ <!-- Start category -->
+ <div class="containerCategory">
+    <div class="container-fluid normal_width">
+        <div class="C_T_A_B">
+            <div class="findType">
+                <h2>Find Your Car </h2>
+                <div class="buttonmgroup">
+                    <button (click)="changeCategory('wagon')" class="{{wagon}}">Select Wagon Type <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                    <button (click)="changeCategory('Brand')" class="{{Brand}}">Select Brand <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                </div>
+                <div class="buttonmgroup">
+                    <button (click)="changeCategory('model')" class="{{model}}">Select Model <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                    <button (click)="changeCategory('year')"  class="{{year}}">Select Year <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                </div>
+                <div class="buttonmgroup">
+                    <button (click)="changeCategory('Mileage')" class="{{Mileage}}">Select Mileage <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                    <button (click)="changeCategory('City')" class="{{City}}">Select City <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                </div>
+                <div class="buttonmgroup">
+                    <button (click)="changeCategory('Transmissions')" class="{{Transmissions}}">Select Transmissions <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                    <button (click)="changeCategory('Price')" class="{{Price}}">Select Price <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+                </div>
+                <div class="searchButton">
+                    <button (click)="filterCar()"> <img src="./assets/Site_Images/search.svg" alt=""> Search</button>
+                </div>
+            </div>
+            <div class="arrowToCategory">
+                <img src="./assets/Site_Images/arrowcategory.svg" alt="">
+            </div>
+        
+           <div *ngIf="category == 'wagon'" class="chooesType">
+                <h2>Wagon Type </h2>
+                <div class="containerTyps">
+                  <div class="typeCars">
+                    <button (click)="Wagon('micro')" [class]="wagonStates['micro']">
+                      <img src="./assets/Site_Images/Micro_car.svg" alt="">
+                      <p>micro</p>
+                    </button>
+                    <button (click)="Wagon('Sedan')" [class]="wagonStates['Sedan']">
+                      <img src="./assets/Site_Images/Sedan_car.svg" alt="">
+                      <p>Sedan</p>
+                    </button>
+                  </div>
+                  <div class="typeCars">
+                    <button (click)="Wagon('Cuv')" [class]="wagonStates['Cuv']">
+                      <img src="./assets/Site_Images/Cuv_car.svg" alt="">
+                      <p>Cuv</p>
+                    </button>
+                    <button (click)="Wagon('Suv')" [class]="wagonStates['Suv']">
+                      <img src="./assets/Site_Images/Suv_car.svg" alt="">
+                      <p>Suv</p>
+                    </button>
+                  </div>
+                  <div class="typeCars">
+                    <button (click)="Wagon('Hatchback')" [class]="wagonStates['Hatchback']">
+                      <img src="./assets/Site_Images/Hatchback_car.svg" alt="">
+                      <p>Hatchback</p>
+                    </button>
+                    <button (click)="Wagon('Roadster')" [class]="wagonStates['Roadster']">
+                      <img src="./assets/Site_Images/Roadster_car.svg" alt="">
+                      <p>Roadster</p>
+                    </button>
+                  </div>
+                  <div class="typeCars">
+                    <button (click)="Wagon('Pickup')" [class]="wagonStates['Pickup']">
+                      <img src="./assets/Site_Images/Pickup_car.svg" alt="">
+                      <p>Pickup</p>
+                    </button>
+                    <button (click)="Wagon('coupe')" [class]="wagonStates['coupe']">
+                      <img src="./assets/Site_Images/coupe_car.svg" alt="">
+                      <p>coupe</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            <div *ngIf="category == 'Brand'" class="chooesType">
+                <h2>Brand Type </h2>
+                <div class="input_group">
+                    <input type="text" placeholder="Type the Brand " [value]="selectedBrand">
+                </div>
+                <div class="containerTyps">
+                    <div class="typeCars">
+                        <button (click)="Brands('BMW')"[class]="brandStates['BMW']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>BMW</p>
+                        </button>
+                        <button (click)="Brands('Nissan')" [class]="brandStates['Nissan']">
+                            <img src="./assets/Site_Images/Nissan_icon.svg" alt="">
+                            <p>Nissan</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Brands('Toyota')" [class]="brandStates['Toyota']">
+                            <img src="./assets/Site_Images/Toyota_icon.svg" alt="">
+                            <p>Toyota</p>
+                        </button>
+                        <button (click)="Brands('Honda')"[class]="brandStates['Honda']">
+                            <img src="./assets/Site_Images/Honda_icon.svg" alt="">
+                            <p>Honda</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Brands('Lancer')" [class]="brandStates['Lancer']">
+                            <img src="./assets/Site_Images/Lancer_icon.svg" alt="">
+                            <p>Lancer</p>
+                        </button>
+                        <button (click)="Brands('Ford')" [class]="brandStates['Ford']">
+                            <img src="./assets/Site_Images/Ford_icon.svg" alt="">
+                            <p>Ford</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Brands('Mazda')" [class]="brandStates['Mazda']">
+                            <img src="./assets/Site_Images/Mazda_icon.svg" alt="">
+                            <p>Mazda</p>
+                        </button>
+                        <button (click)="Brands('kia')" [class]="brandStates['kia']">
+                            <img src="./assets/Site_Images/kia_icon.svg" alt="">
+                            <p>Kia</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="category == 'model'" class="chooesType">
+                <h2>Car Model </h2>
+                <div class="input_group">
+                    <input type="text" placeholder="Type the Brand " [value]="selectedModel">
+                </div>
+                <div class="containerTyps">
+                    <div class="typeCars">
+                        <button (click)="Models('X6')" [class]="modelStates['X6']"   >
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>X6</p>
+                        </button>
+                        <button (click)="Models('X3')" [class]="modelStates['X3']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>X3</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Models('M3')" [class]="modelStates['M3']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>M3</p>
+                        </button>
+                        <button (click)="Models('X1')" [class]="modelStates['X1']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>X1</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Models('M5')" [class]="modelStates['M5']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>M5</p>
+                        </button>
+                        <button (click)="Models('I8')" [class]="modelStates['I8']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>I8</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Models('M4')" [class]="modelStates['M4']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>M4</p>
+                        </button>
+                        <button (click)="Models('X7')" [class]="modelStates['X7']">
+                            <img src="./assets/Site_Images/BMW_icon.svg" alt="">
+                            <p>X7</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+              
+            <div *ngIf="category == 'year'" class="chooesType">
+                <h2>Car Year </h2>
+                <div class="input_group" >
+                    <input type="text" placeholder="Type the year" [value]="selectedYear">
+                </div>
+                <div class="containerTyps">
+                    <div class="typeCars">
+                        <button (click)="Year('1995')" [class]="yearStates['1995']">
+                           <p>1995</p>
+                        </button>
+                        <button (click)="Year('1996')" [class]="yearStates['1996']">
+                           <p>1996</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Year('1997')" [class]="yearStates['1997']">
+                           <p>1997</p>
+                        </button>
+                        <button (click)="Year('1998')" [class]="yearStates['1998']">
+                           <p>1998</p>
+                        </button>
+                    </div>
+                </div>
+<!-- ______________________________________________________________________________________________________________ -->
+            </div>
+            <div *ngIf="category == 'Mileage'" class="chooesType">
+                <h2>Mileage</h2>
+                <div class="input_group">
+                    <label for="">Min KMs </label>
+                    <input type="text" placeholder="Type the Min KMs ">
+                </div>
+                <div class="input_group">
+                    <label for="">Max KMs </label>
+                    <input type="text" placeholder="Type the Max KMs">
+                </div>
+                <!-- Start Two points Range-->
+                <div class="range_container">
+                    <div class="sliders_control">
+                        <input id="fromSlider" type="range" value="10" min="0" max="100" />
+                        <input id="toSlider" type="range" value="40" min="0" max="100" />
+                    </div>
+                    <div class="form_control">
+                        <div class="form_control_container">
+                            <div class="form_control_container__time">Min KMs</div>
+                            <input class="form_control_container__time__input" type="number" id="fromInput" value="10" min="0" max="100" />
+                        </div>
+                        <div class="form_control_container">
+                            <div class="form_control_container__time">Max KMs</div>
+                            <input class="form_control_container__time__input" type="number" id="toInput" value="40" min="0" max="100" />
+                        </div>
+                    </div>
+                </div>
+                <!-- End Two points Range-->
+
+            </div>
+            <div *ngIf="category == 'Price'" class="chooesType">
+                <h2>Price </h2>
+                <div class="input_group">
+                    <input type="text" placeholder="Price from">
+                </div>
+                <div class="input_group">
+                    <input type="text" placeholder="Price To">
+                </div>
+            </div>
+            <div *ngIf="category == 'City'" class="chooesType">
+                <h2>City </h2>
+                <div class="input_group">
+                    <div class="select_warpper">
+                        <div class="select ">
+                            <span>Cairo</span>
+                            <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        </div>
+
+                        <div class="options">
+                            <span>Cairo</span>
+                            <span>Cairo</span>
+                            <span>Cairo</span>
+                            <span>Cairo</span>
+                            <span>Cairo</span>
+                            <span>Cairo</span>
+                            <span>Cairo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div *ngIf="category == 'Transmissions'" class="chooesType">
+                <h2>Transmissions</h2>
+                <div class="containerTyps">
+                    <div class="typeCars">
+                        <button (click)="Transmission('Manual')" [class]="transmissionStates['Manual']">
+                            <img src="./assets/Site_Images/manual.svg" alt="">
+                            <p>Manual</p>
+                        </button>
+                        <button (click)="Transmission('Automatic')" [class]="transmissionStates['Automatic']">
+                            <img src="./assets/Site_Images/automatic_Tran.svg" alt="">
+                            <p>Automatic</p>
+                        </button>
+                    </div>
+                    <div class="typeCars">
+                        <button (click)="Transmission('CVT')" [class]="transmissionStates['CVT']">
+                            <img src="./assets/Site_Images/CVT.svg" alt="">
+                            <p>CVT</p>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+<!-- end category -->

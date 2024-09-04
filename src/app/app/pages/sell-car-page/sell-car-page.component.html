@@ -1,0 +1,52 @@
+<app-slider-with-taps></app-slider-with-taps>
+
+<!-- Start Car Information-->
+
+<div class="car_information">
+    <div class="container-fluid normal_width ">
+        <div class="titleSell">
+            <img src="./assets/Site_Images/homeSell.svg" alt="">
+            <img class="homeArrow" src="./assets/Site_Images/arrowSell.svg" alt="">
+            <p>sell car</p>
+        </div>
+
+        <div class="steps ">
+            <div [class]="'step_one '+ (stepNo >= 1?'step_active':'')"> 1
+                <div class="titleStep">
+                    <img src="./assets/Site_Images/carInformation.svg" alt="">
+                    <p>Car Information</p>
+                </div>
+            </div>
+            <div class="step_line"></div>
+
+            <div [class]="'step_one '+ (stepNo >= 2?'step_active':'')"> 2
+                <div class="titleStep">
+                    <img src="./assets/Site_Images/Newspaper.svg" alt="">
+                    <p>Newspaper</p>
+                </div>
+            </div>
+            <div class="step_line"></div>
+
+            <div [class]="'step_one '+ (stepNo >= 3?'step_active':'')"> 3
+                <div class="titleStep">
+                    <img src="./assets/Site_Images/confirm.svg" alt="">
+                    <p>Confirmtion</p>
+                </div>
+            </div>
+            <div class="step_line"></div>
+            <div [class]="'step_one '+ (stepNo >= 4?'step_active':'')"> 4
+                <div class="titleStep">
+                    <img src="./assets/Site_Images/payment.svg" alt="">
+                    <p>Payment</p>
+                </div>
+            </div>
+        </div>
+        <app-car-information *ngIf="stepNo == 1" (messageEmitter)="moveNext($event)"></app-car-information>
+        <!-- <app-select-news-paper-page *ngIf="stepNo == 2" (messageEmitter)="moveNext($event)" [sellCar]="sellCar"></app-select-news-paper-page> -->
+        <app-news-paper-location *ngIf="stepNo == 2" (messageEmitter)="moveNext($event)" [sellCar]="sellCar"></app-news-paper-location>
+        <app-confirmaion-page *ngIf="stepNo == 3" (messageEmitter)="moveNext($event)" [carObject]="sellCar"></app-confirmaion-page>
+        <app-payment-page *ngIf="stepNo == 4" [carObject]="sellCar"></app-payment-page>
+    </div>
+</div>
+
+<!-- end Car Information-->

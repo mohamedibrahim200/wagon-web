@@ -1,0 +1,46 @@
+    <!-- Start minheader -->
+
+    <div class="shortHeader">
+        <div class="background-images topcircle">
+            <img src="./assets/Site_Images/topCricle.svg" alt="">
+        </div>
+        <div class="changeLanguage">
+            <a >
+                <img src="./assets/Site_Images/AR.svg" alt="">
+            </a>
+        </div>
+        <div class="copyRight">
+            <p>&#64;{{ currentDate.getFullYear()}} All Rights © {{ currentDate.getFullYear()}}. All Rights Reserved</p>
+        </div>
+    </div>
+    <!-- end minheader -->
+
+    
+    <!-- Start header -->
+    <div class="header">
+        <div class="containerHeader">
+            <div class="logo">
+                <img src="./assets/Site_Images/logo.svg" alt="">
+            </div>
+            <div class="menu btn1" data-menu="1">
+                <div class="icon-left"></div>
+                <div class="icon-right"></div>
+            </div>
+            <div class="main-nav-container ">
+                <ul class="main-nav">
+                    <li class="menu_item"><a routerLink="/" class="menu_item_link">Home</a></li>
+                    <li class="menu_item"><a routerLink="AboutUS" class="menu_item_link">About</a></li>
+                    <li class="menu_item"><a routerLink="copmare" class="menu_item_link">Compare</a></li>
+                    <li class="menu_item"><a routerLink="Favorite" class="menu_item_link">Favorite </a></li>
+                    <li class="menu_item"><a routerLink="Agency" class="menu_item_link">Agency</a></li>
+                    <li class="menu_item"><a routerLink="Dealer" class="menu_item_link">Dealers</a></li>
+                    <li *ngIf="!user" class="menu_item loginMenu"><a routerLink="login" class="menu_item_link" >LOG IN</a></li>
+                    <li *ngIf="user" class="menu_item loginMenu"><a class="menu_item_link" >{{user.FirstName + ' ' + user.LastName}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+
+    <!--################# end Conatiner header #################-->
+

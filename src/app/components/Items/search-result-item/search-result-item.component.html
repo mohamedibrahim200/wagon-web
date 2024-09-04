@@ -1,0 +1,36 @@
+<div class="CarDevice">
+    <div class="imgProduct">
+        <img (src)="item.imageUrl" alt="">
+    </div>
+    <div class="price_favorite">
+        <div class="price_Tile">
+            <p>{{ item.price }}</p>
+            <h3>{{item.nameEn}}</h3>
+        </div>
+        <div class="favorite_subPage">
+            <div class="compare">
+                <img src="./assets/Site_Images/compare.svg" alt="">
+            </div>
+            <div class="favorite">
+                <img src="./assets/Site_Images/heart.svg" alt="">
+            </div>
+            <div class="arrowProduct">
+                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="detailsProduct">
+        <div class="speed">
+            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+            <p>{{item.maxSpeed}}</p>
+        </div>
+        <div class="auto">
+            <img src="./assets/Site_Images/Automatic.svg" alt="">
+            <p>{{item.engineType}}</p>
+        </div>
+        <div class="calender">
+            <img src="./assets/Site_Images/calender_product.svg" alt="">
+            <p>{{item.model}}</p>
+        </div>
+    </div>
+</div>

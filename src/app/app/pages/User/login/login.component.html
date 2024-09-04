@@ -1,0 +1,54 @@
+<!-- Start Login Page -->
+
+<div class="login_register">
+    <div class="container-fluid normal_width ">
+        <div class="login_register_Container">
+            <div class="loginSection">
+                <div class="headLogin_register">
+                    <h2>Login</h2>
+                </div>
+                <div class="re_de">
+                    <p>New To Wagon.Com ? <a routerLink="/Registeration">Register</a>. Are You A <span>Dealer</span> ?</p>
+                </div>
+                <form [formGroup]="myformGroup" (submit)="submit()">
+                    <div class="input_group">
+                        <label>Email</label>
+                        <input formControlName="email" type="text" placeholder="Email">
+                        <span *ngIf="myformGroup.controls['email'].invalid && (myformGroup.controls['email'].dirty || myformGroup.controls['email'].touched)" class="required">required</span>
+                    </div>
+                    <div class="input_group">
+                        <label>Password</label>
+                        <input formControlName="password" type="password" placeholder="Password">
+                        <span *ngIf="myformGroup.controls['password'].invalid && (myformGroup.controls['password'].dirty || myformGroup.controls['password'].touched)" class="required">required</span>
+                    </div>
+                    <div class="textForget">
+                        <p>Minimum Of Eight Characters</p>
+                        <a>Forget Password ?</a>
+                    </div>
+                    <div class="termsLogin_register">
+                        <p> By Signing In To Your Profile, You Agree To Our <span>Privacy Statement</span> And <span>Terms Of Service</span>.</p>
+                    </div>
+                    <div class="buttonLogin_register">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="advertisementSection">
+                <div class="pathss">
+                    <img class="pathOne" src="./assets/Site_Images/Path_one_login.svg" alt="">
+                    <img class="pathTwo" src="./assets/Site_Images/Path_two_login.svg" alt="">
+                </div>
+                <div class="login_info">
+                    <img src="./assets/Site_Images/logo.svg" alt="">
+                    <h2>Welcome to the website</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat facilis quibusdam debitis tempore, quos molestias, enim soluta quaerat perspiciatis veritatis cum suscipit perferendis vitae voluptatem minima assumenda ipsa consequuntur
+                        numquam.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- End Login Page -->

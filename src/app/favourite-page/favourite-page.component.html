@@ -1,0 +1,20 @@
+<div class="favorite">
+    <div class="container-fluid normal_width ">
+        <div class="titleSell">
+            <img src="./assets/Site_Images/homeSell.svg" alt="">
+            <img src="./assets/Site_Images/arrowSell.svg" alt="">
+            <p>favorite</p>
+        </div>
+        <div  *ngIf="FavouriteItems.length==0"  class="empty_favorite" >
+            <div class="empty_favorite_container">
+                <img class="emptyIcon" src="./assets/Site_Images/empty_ADS.svg" alt="">
+                <h2>Your favorites list is empty </h2>
+                <span>Explore Your Favorite Car To Show Them Here</span>
+                <button class="btn_home">Home</button>
+            </div>
+        </div>
+        <div  *ngFor="let FavouriteItem of FavouriteItems">
+            <app-favouriteitemelemnet [item]="FavouriteItem"></app-favouriteitemelemnet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="containerFavorite">
+    <div class="imgADS_details">
+        <img src="./assets/Site_Images/car_one.png" alt="">
+    </div>
+    <div class="containerContect">
+        <div class="container_title">
+            <div class="title_price">
+                <h2 class="title_details">{{item.name}} {{item.model}}</h2>
+                <p class="price">{{item.price}} $</p>
+            </div>
+        </div>
+        <div class="container_component">
+            <div class="component_car">
+                <p>Location :</p>
+                <span>{{item.location}}</span>
+            </div>
+            <div class="component_car">
+                <p>Kilometers :</p>
+                <span>{{item.Kilometers}} KM</span>
+            </div>
+            <div class="component_car">
+                <p>year :</p>
+                <span>{{item.year}}</span>
+            </div>
+
+        </div>
+        <div class="containerStatus_de">
+            <div class="container_status">
+                <p>{{item.Posted_On}}</p>
+
+                <p>{{item.Updated_On}}</p>
+            </div>
+            <div class="container_buttonStatus">
+                <button class="buttonStatus">Details</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="delete_ads">
+       <button style="background-color: rgba(241, 66, 66, 0);">
+        <img src="./assets/Site_Images/delete.svg" alt="">
+       </button> 
+    </div>
+</div>

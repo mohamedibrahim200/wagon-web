@@ -1,0 +1,51 @@
+<!-- <div class="empty_favorite">
+
+    <div class="empty_favorite_container">
+        <img class="emptyIcon" src="./assets/Site_Images/empty_ADS.svg" alt="">
+        <h2>{{emptyPage}} </h2>
+        <span *ngIf="emptyHint">{{emptyHint}}</span>
+        <button class="btn_home">Home</button>
+    </div>
+</div> -->
+<div class="containerFavorite" >
+    <div class="imgADS_details">
+        <img src="./assets/Site_Images/car_one.png" alt="">
+    </div>
+    <div class="containerContect" *ngFor="let count of faviteitems " >
+        <div class="container_title">
+            <div class="title_price" *ngFor="let fov of faviteitems ">
+                <h2 class="title_details">{{count.name}}</h2>
+                <p class="price">{{fov.price}}</p>
+            </div>
+        </div>
+        <div class="container_component"  *ngFor="let loc of faviteitems">
+            <div class="component_car">
+                <p>Location : </p>
+                <span>{{count.location}}</span>
+            </div>
+            <div class="component_car" *ngFor="let kol of faviteitems">
+                <p>Kilometers :</p>
+                <span>{{count.Kilometers}}</span>
+            </div>
+            <div class="component_car" *ngFor="let year of faviteitems">
+                <p>year :</p>
+                <span>{{count.year}}</span>
+            </div>
+
+        </div>
+        <div class="containerStatus_de">
+            <div class="container_status" *ngFor="let pos of faviteitems" >
+                <p>{{pos.Posted_On}}</p>
+
+                <p>{{pos.Updated_On}}</p>
+            </div>
+            <div class="container_buttonStatus">
+                <button class="buttonStatus">Details</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="delete_ads">
+        <img src="./assets/Site_Images/delete.svg" alt="">
+    </div>
+</div>

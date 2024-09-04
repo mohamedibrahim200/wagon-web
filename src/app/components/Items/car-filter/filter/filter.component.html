@@ -1,0 +1,25 @@
+<div class="findType">
+    <h2>Find Your Car </h2>
+    <div class="buttonmgroup"  >
+        <button (click)="changeCategory('wagon')" class="{{wagon}}">Select Wagon Type <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+        <button (click)="changeCategory('Brand')" class="{{Brand}}">Select Brand <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+    </div>
+    <div class="buttonmgroup">
+        <button (click)="changeCategory('model')" class="{{model}}">Select Model <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+        <button (click)="changeCategory('year')" class="{{year}}">Select Year <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+    </div>
+    <div class="buttonmgroup">
+        <button (click)="changeCategory('Mileage')" class="{{Mileage}}">Select Mileage <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+        <button (click)="changeCategory('City')" class="{{City}}">Select City <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+    </div>
+    <div class="buttonmgroup">
+        <button (click)="changeCategory('Transmissions')" class="{{Transmissions}}">Select Transmissions <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+        <button (click)="changeCategory('Price')" class="{{Price}}">Select Price <img src="./assets/Site_Images/arrowButtonCa.svg" alt=""></button>
+    </div>
+    <div class="searchButton">
+        <button (click)="filterCar()"> <img src="./assets/Site_Images/search.svg" alt=""> Search</button>
+    </div>
+</div>
+<div class="arrowToCategory">
+    <img src="./assets/Site_Images/arrowcategory.svg" alt="">
+</div>

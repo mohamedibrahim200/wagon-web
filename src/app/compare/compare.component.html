@@ -1,0 +1,84 @@
+< class="favorite">
+    <div class="container-fluid normal_width ">
+        <div class="titleSell">
+            <img src="./assets/Site_Images/homeSell.svg" alt="">
+            <img src="./assets/Site_Images/arrowSell.svg" alt="">
+            <p>favorite</p>
+        </div>
+        <div  *ngIf="compariteItems.length==0"  class="empty_favorite" >
+            <div class="empty_favorite_container">
+                <img class="emptyIcon" src="./assets/Site_Images/empty_ADS.svg" alt="">
+                <h2>Your favorites list is empty </h2>
+                <span>Explore Your Favorite Car To Show Them Here</span>
+                <button class="btn_home">Home</button>
+            </div>
+        </div>     
+            
+                 <div class="compare">
+        <div class="container-fluid normal_width">
+            <div class="titleSell">
+                <img src="./assets/Site_Images/homeSell.svg" alt="">
+                <img src="./assets/Site_Images/arrowSell.svg" alt="">
+                <p>Compare</p>
+            </div>
+            <div class="containerNumberRemove">
+                <div class="numberCompare">
+                    <h2>Wagon Comparison</h2>
+                   <span>{{compariteItems.length}} Cars Selected For Comparison</span>
+                </div>
+                <div class="btnRemoveAll">
+                    <button>Remove All</button>
+                </div>
+            </div>
+            <div class="tableCompare">
+                <div class="products-comparison-table item_table row">
+                    <div class="itemTable_title">
+                        <div class="headTitle">
+                            <h3>General Features</h3>
+                        </div>
+                        <div>
+                            <h3>Trim</h3>
+                        </div>
+                        <div>
+                            <h3>Car Price</h3>
+                        </div>
+                        <div>
+                            <h3>Transmission</h3>
+                        </div>
+                        <div>
+                            <h3>Engine Capacity</h3>
+                        </div>
+                        <div>
+                            <h3>Embedded Riders</h3>
+                        </div>
+                        <div>
+                            <h3>Trim</h3>
+                        </div>
+                        <div>
+                            <h3>Car Price</h3>
+                        </div>
+                        <div>
+                            <h3>Lottary</h3>
+                        </div>
+                        <div>
+                            <h3>Transmission</h3>
+                        </div>
+                        <div>
+                            <h3>Engine Capacity</h3>
+                        </div>
+                        <div>
+                            <h3>Engine Capacity</h3>
+                        </div>
+                        <div>
+                            <h3></h3>
+                        </div>
+                    </div>
+                    
+               <app-compare-itemelemnet *ngFor="let compariteItem of compariteItems" [Citem]="compariteItem"></app-compare-itemelemnet>       
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        
+

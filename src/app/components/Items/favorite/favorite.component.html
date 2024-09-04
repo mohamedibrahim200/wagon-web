@@ -1,0 +1,42 @@
+<div class="containerFavorite">
+    <div class="imgADS_details">
+        <img [src]="favorite.imageUrl" alt="">
+    </div>
+    <div class="containerContect">
+        <div class="container_title">
+            <div class="title_price">
+                <h2 class="title_details">{{favorite.name}}</h2>
+                <p class="price">{{favorite.price | number:'1.2-2'}}</p>
+            </div>
+        </div>
+        <div class="container_component">
+            <div class="component_car">
+                <p>Location :</p>
+                <span>{{favorite.city}}</span>
+            </div>
+            <div class="component_car">
+                <p>Kilometers :</p>
+                <span>{{favorite.spentKilometers | number:'1.0-2'}} KM</span>
+            </div>
+            <div class="component_car">
+                <p>year :</p>
+                <span>{{favorite.model}}</span>
+            </div>
+
+        </div>
+        <div class="containerStatus_de">
+            <div class="container_status">
+                <p>Posted On {{favorite.createdOn | date:"short"}}</p>
+
+                <p>Updated On {{favorite.updatedOn | date:"short"}}</p>
+            </div>
+            <div (click)="goToDetails()" class="container_buttonStatus">
+                <button class="buttonStatus">Details</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="delete_ads">
+        <img src="./assets/Site_Images/delete.svg" alt="">
+    </div>
+</div>

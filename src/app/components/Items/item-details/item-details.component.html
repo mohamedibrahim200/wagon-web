@@ -1,0 +1,870 @@
+ <!-- Start Search item -->
+
+ <div class="searchitem_page">
+    <div class="container-fluid normal_width">
+        <div class="titleSell">
+            <img src="./assets/Site_Images/homeSell.svg" alt="">
+            <img class="homeArrow" src="./assets/Site_Images/arrowSell.svg" alt="">
+            <p>Search item </p>
+        </div>
+
+        <div class="InformationProduct">
+            <div class="detailsProductImage">
+                <div class="swiper thumbs2">
+                    <div class="swiper-wrapper">
+                        <div *ngFor="let img of carDetails.mainImagesUrls" class="swiper-slide">
+                            <img [src]="img" />
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="swiper thumbs1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./assets/Site_Images/productCar.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detailsProductContent">
+                <div class="headPro">
+                    <div class="subtitlePro">
+                        <p>Scokda</p>
+                    </div>
+                    <div class="imgcomFa">
+                        <div class="compareItem">
+                            <img src="./assets/Site_Images/compare.svg" alt="">
+                        </div>
+                        <div class="favoriteItem">
+                            <img src="./assets/Site_Images/heart.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="bodyPro">
+                    <div class="titleBodyPro">
+                        <h1>Citroen C-Elysee2022</h1>
+                    </div>
+                    <div class="contentPro">
+                        <div class="locationPro">
+                            <img src="./assets/Site_Images/location_icon.svg" alt="">
+                            <p>Nasr City</p>
+                        </div>
+                        <div class="mobilePro">
+                            <img src="./assets/Site_Images/mobile_icon.svg" alt="">
+                            <p>123456789</p>
+                        </div>
+                    </div>
+                    <div class="pricePro">
+                        <h1>236,900 EGP</h1>
+                    </div>
+                </div>
+                <div class="footerPro">
+                    <p class="titlePro">Specifcations</p>
+                    <div class="containerBoxsPro">
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/modelPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Model Year</span>
+                                <p>2014</p>
+                            </div>
+                        </div>
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/KilometersPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Kilometers</span>
+                                <p>80,000KM</p>
+                            </div>
+                        </div>
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/TransmissionPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Transmission</span>
+                                <p>Automatic</p>
+                            </div>
+                        </div>
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/CarColorPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Car Color</span>
+                                <p>Black</p>
+                            </div>
+                        </div>
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/FuelPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Fuel Type</span>
+                                <p>Petrol</p>
+                            </div>
+                        </div>
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/EngineCapacityPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Engine Capacity</span>
+                                <p>2000</p>
+                            </div>
+                        </div>
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/ServiceHistoryPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Service History</span>
+                                <p>N/A</p>
+                            </div>
+                        </div>
+                        <div class="boxPro">
+                            <img src="./assets/Site_Images/doorPro.svg" alt="">
+                            <div class="detailsBoxPro">
+                                <span>Number Of Doors</span>
+                                <p>4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="containerDetailsItem">
+            <div class="information_tabs ">
+                <div class="main_cont_tap">
+                    <div class="head_details_item head_details_item_active" data-content=".content_tap_item1">
+                        <h3>Car Description </h3>
+                    </div>
+                    <div class="head_details_item" data-content=".content_tap_item2">
+                        <h3>Car Details</h3>
+                    </div>
+                    <div class="head_details_item" data-content=".content_tap_item3">
+                        <h3>Features</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="content_tap">
+                <div class="content_tap_item1">
+                    <div class="details_data">
+                        <p class="description_car">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa esse iusto laborum maxime distinctio veritatis quam exercitationem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa esse iusto laborum maxime distinctio
+                            veritatis quam exercitationem </p>
+                    </div>
+
+                </div>
+                <div class="content_tap_item2">
+                    <div class="details_data">
+
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Condtion : </label>
+
+                                        <label> Used </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Make : </label>
+
+                                        <label> Scokda </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="data_item ">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Model : </label>
+
+                                        <label> Scokda </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary">Year : </label>
+
+                                        <label> 2015  </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Price: </label>
+
+                                        <label> $110,500 </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Mileage : </label>
+
+                                        <label> 72,500 miles </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Fuel : </label>
+
+                                        <label> Diesel </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Color : </label>
+
+                                        <label> Blue </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Body Style : </label>
+
+                                        <label> SUV </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Transmission : </label>
+
+                                        <label> Automatic </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Doors : </label>
+
+                                        <label> 5 </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Engine : </label>
+
+                                        <label>V6,301</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="data_item ">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Power : </label>
+
+                                        <label> 179 KW(240) HP </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_tap_item3">
+                    <div class="details_data">
+
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> ABS : </label>
+
+                                        <label> <img src="./assets/Site_Images/available.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Auxiliary hearting : </label>
+
+                                        <label> <img src="./assets/Site_Images/available.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="data_item ">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Bluetooth : </label>
+
+                                        <label> <img src="./assets/Site_Images/unavailable.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary">CD player : </label>
+                                        <label> <img src="./assets/Site_Images/available.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary"> Central locking : </label>
+                                        <label> <img src="./assets/Site_Images/unavailable.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary">Head-up display : </label>
+                                        <label> <img src="./assets/Site_Images/available.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary">Navigation system : </label>
+                                        <label> <img src="./assets/Site_Images/available.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary">Panoramic roof : </label>
+                                        <label> <img src="./assets/Site_Images/unavailable.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="data_item">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary">Parking sensors : </label>
+                                        <label> <img src="./assets/Site_Images/available.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="flex_box">
+                                        <label class="text_secondary">Sport package : </label>
+                                        <label> <img src="./assets/Site_Images/available.svg" alt=""> </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="">
+            <div class="relatedCars_container">
+                <div class="swiper related_swiper_container">
+                    <h2 class="titleSwiper">Related Cars</h2>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="containerCars">
+                                <div class="CarDevice">
+                                    <div class="imgProduct">
+                                        <img src="./assets/Site_Images/car_one.png" alt="">
+                                    </div>
+                                    <div class="price_favorite">
+                                        <div class="price_Tile">
+                                            <p>$60,000</p>
+                                            <h3>BMW 550I</h3>
+                                        </div>
+                                        <div class="favorite_subPage">
+                                            <div class="compare">
+                                                <img src="./assets/Site_Images/compare.svg" alt="">
+                                            </div>
+                                            <div class="favorite">
+                                                <img src="./assets/Site_Images/heart.svg" alt="">
+                                            </div>
+                                            <div class="arrowProduct">
+                                                <img src="./assets/Site_Images/arrowProduct.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detailsProduct">
+                                        <div class="speed">
+                                            <img src="./assets/Site_Images/speedMotor.svg" alt="">
+                                            <p>7000</p>
+                                        </div>
+                                        <div class="auto">
+                                            <img src="./assets/Site_Images/Automatic.svg" alt="">
+                                            <p>Automatic</p>
+                                        </div>
+                                        <div class="calender">
+                                            <img src="./assets/Site_Images/calender_product.svg" alt="">
+                                            <p>2019</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <img src="./assets/Site_Images/arrow_slider_right.svg">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="./assets/Site_Images/arrow_slider_left.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- end Search item -->

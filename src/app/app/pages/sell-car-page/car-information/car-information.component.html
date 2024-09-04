@@ -1,0 +1,284 @@
+<form [formGroup]="myFormGroup" (submit)="nextStep()">
+<div class="containerSell">
+    <div class="titleBoxSell">
+        <h2>Car's Main Info</h2>
+        <p>The Data That The Buyer In Looking For </p>
+    </div>
+    <div class="boxSell">
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Make</label>
+                <div class="select_warpper">
+                    <div class="select ">
+                        <span>{{formData.brand == ""? "Choose Brand": formData.brand}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="text" formControlName="brand" [value]="formData.brand" class="d-none"/>
+                    </div>
+
+                    <div class="options">
+                        <span *ngFor="let brand of carBrands" (click)="brandChange(brand)">{{brand.brand}}</span>
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['brand'].invalid && (myFormGroup.controls['brand'].dirty || myFormGroup.controls['brand'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Model</label>
+                <div class="select_warpper">
+                    <div class="select ">
+                        <span>{{formData.model == ""? "Choose Model": formData.model}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="text" formControlName="model" [value]="formData.model" class="d-none"/>
+                    </div>
+                    <div class="options">
+                        <span *ngFor="let model of carModels" (click)=" updateCarModel(model)">{{model}}</span>
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['model'].invalid && (myFormGroup.controls['model'].dirty || myFormGroup.controls['model'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            <div class="input_group">
+                <label>Body Type</label>
+                <div class="select_warpper">
+                    <div class="select ">
+                        <span>{{formData.bodyType == ""? "Choose Body Type": formData.bodyType}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="text" formControlName="bodyType" [value]="formData.bodyType" class="d-none"/>
+                    </div>
+
+                    <div class="options">
+                        <span *ngFor="let type of carBodyTypes" (click)="updateBodyType(type.Name)">{{type.Name}}</span>
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['bodyType'].invalid && (myFormGroup.controls['bodyType'].dirty || myFormGroup.controls['bodyType'].touched)" class="required">required</span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Milage</label>
+                <input formControlName="milage" type="number" placeholder="Milage">
+                <span *ngIf="myFormGroup.controls['milage'].invalid && (myFormGroup.controls['milage'].dirty || myFormGroup.controls['milage'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            <div class="input_group calender_in">
+                <label>Year</label>
+                <div class="select_warpper">
+                    <div class="select ">
+                        <span>{{formData.year == 0? "Choose year": formData.year}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="number" class="d-none" formControlName="year" />
+                    </div>
+
+                    <div class="options">
+                        <span *ngFor="let year of modelYears" (click)="updateCarYearModel(year)">{{year}}</span>
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['year'].invalid && (myFormGroup.controls['year'].dirty || myFormGroup.controls['year'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Transmission</label>
+                <div class="select_warpper">
+                    <div class="select ">
+                        <span>{{formData.transmision == ""? "Choose Transmission": formData.transmision}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="text" formControlName="transmission" [value]="formData.transmision" class="d-none"/>
+                    </div>
+
+                    <div class="options">
+                        <span *ngFor="let transmision of transmissionTypes" (click)="updateTransmisionType(transmision)">{{transmision}}</span>
+                        
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['transmission'].invalid && (myFormGroup.controls['transmission'].dirty || myFormGroup.controls['transmission'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Color</label>
+                <div class="select_warpper">
+                    <div class="select">
+                        <span>{{formData.color == ""? 'Choose Color': formData.color}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="text" formControlName="color" [value]="formData.color" class="d-none"/>
+                    </div>
+
+                    <div class="options">
+                        <span *ngFor="let color of colors" (click)="updateCarColor(color)">{{color}}</span>
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['color'].invalid && (myFormGroup.controls['color'].dirty || myFormGroup.controls['color'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Engine Capacity</label>
+                <input formControlName="engineCapacity" type="number" placeholder="Engine Capacity">
+                <span *ngIf="myFormGroup.controls['engineCapacity'].invalid && (myFormGroup.controls['engineCapacity'].dirty || myFormGroup.controls['engineCapacity'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Interial matrial</label>
+                <input formControlName="interialMatrial" type="text" placeholder="Interial matrial">
+                <span *ngIf="myFormGroup.controls['interialMatrial'].invalid && (myFormGroup.controls['interialMatrial'].dirty || myFormGroup.controls['interialMatrial'].touched)" class="required">required</span>
+            </div>
+        </div>
+    </div>
+    <div class="line_inputs"></div>
+
+    <div class="titleBoxSell">
+        <h2>Price And Location</h2>
+        <p>Fill It In Order To Sell Your Car Faster </p>
+    </div>
+    <div class="boxSell">
+        <div class="col-md-4">
+            <div class="input_group">
+                <label for="">Your Price </label>
+                <input formControlName="price" type="number" placeholder="Your Price">
+                <span *ngIf="myFormGroup.controls['price'].invalid && (myFormGroup.controls['price'].dirty || myFormGroup.controls['price'].touched)" class="required">required</span>
+            </div>
+        </div>
+
+
+        
+    </div>
+    <div class="line_inputs"></div>
+
+    <div class="titleBoxSell">
+        <h2>Car Photos</h2>
+        <p>Upload Car Photos Will Speed Up Selling Process</p>
+    </div>
+    <div class="boxSell boxUpload">
+        <div (click)="uploadPhoto('Main')" class="mainPhoto">
+            <img *ngIf="formData.mainImage.trim() == ''" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+            <img *ngIf="formData.mainImage.trim() != ''" [src]="formData.mainImage" alt="">
+            <p>Upload Main Photo</p>
+        </div>
+        <div class="container_photoUpload">
+            <div class="photoUpload_dis">
+                <p>Please Add At Least 3 Image To Continue.</p>
+            </div>
+            <div class="photoUpload_CO">
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 0" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 0" [src]="formData.carImages[0]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 1" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 1" [src]="formData.carImages[1]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 2" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 2" [src]="formData.carImages[2]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 3" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 3" [src]="formData.carImages[3]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 4" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 4" [src]="formData.carImages[4]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 5" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 5" [src]="formData.carImages[5]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 6" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 6" [src]="formData.carImages[6]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+                <div (click)="uploadPhoto('')" class="photoUpload">
+                    <img *ngIf="formData.carImages.length <= 7" src="./assets/Site_Images/uploadPhoto.svg" alt="">
+                    <img *ngIf="formData.carImages.length > 7" [src]="formData.carImages[7]" alt="">
+                    <p>Upload Photos</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="line_inputs"></div>
+    <div class="titleBoxSell">
+        <h2>Seller Detalis</h2>
+        <p>For Communication</p>
+    </div>
+    <div class="boxSell">
+        <div class="col-md-4">
+            <div class="input_group">
+                <label for="">Name </label>
+                <input formControlName="name" type="text" placeholder="Name">
+                <span *ngIf="myFormGroup.controls['name'].invalid && (myFormGroup.controls['name'].dirty || myFormGroup.controls['name'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label for="">Phone Number </label>
+                <input formControlName="phoneNumber" type="text" placeholder="Phone Number">
+                <span *ngIf="myFormGroup.controls['phoneNumber'].invalid && (myFormGroup.controls['phoneNumber'].dirty || myFormGroup.controls['phoneNumber'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label for="">Email </label>
+                <input formControlName="email" type="email" placeholder="Email">
+                <span *ngIf="myFormGroup.controls['email'].invalid && (myFormGroup.controls['email'].dirty || myFormGroup.controls['email'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>Country</label>
+                <div class="select_warpper">
+                    <div class="select disabled">
+                        <span>{{formData.country == ""? "Choose Country": formData.country}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="text" formControlName="country" [value]="formData.country" class="d-none"/>
+                    </div>
+
+                    <div class="options">
+                        <span *ngFor="let country of countries" (click)="changeCountry(country)">{{country.name}}</span>
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['country'].invalid && (myFormGroup.controls['country'].dirty || myFormGroup.controls['country'].touched)" class="required">required</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input_group">
+                <label>City</label>
+                <div class="select_warpper">
+                    <div class="select">
+                        <span>{{formData.city == ""? "Choose City": formData.city}}</span>
+                        <img class="arrowMenu" src="./assets/Site_Images/arrow_down.svg">
+                        <input type="text" formControlName="city" [value]="formData.city" class="d-none"/>
+                    </div>
+
+                    <div class="options">
+                        <span *ngFor="let city of citiesOnly" (click)="updateCity(city)">{{city}}</span>
+                    </div>
+                </div>
+                <span *ngIf="myFormGroup.controls['city'].invalid && (myFormGroup.controls['city'].dirty || myFormGroup.controls['city'].touched)" class="required">required</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="line_inputs"></div>
+
+    <div class=" buttonGroup pt-4 pb-4">
+        <button type="submit" >Almost Finished , Next</button>
+    </div>
+</div>
+</form>
+<app-upload-image *ngIf="displayPopup" (messageEmitter)="pushImage($event)" [displayPopup]="displayPopup"></app-upload-image>
